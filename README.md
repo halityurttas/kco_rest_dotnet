@@ -1,4 +1,4 @@
-# Official Klarna .NET Core SDK
+# Official Klarna .NET Core SDK With .Net Classic Library (Clarna.Rest.Net)
 
 [![NuGet Version][nuget-shield]](https://www.nuget.org/packages/Klarna.Rest.Core/)
 [![Build Status][travis-image]](https://travis-ci.org/klarna/kco_rest_dotnet)
