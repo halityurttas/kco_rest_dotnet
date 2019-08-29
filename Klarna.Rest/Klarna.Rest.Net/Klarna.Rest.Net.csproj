@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{90EB3AD7-3FBE-45E2-837F-4D7410B6A4F4}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Klarna.Rest.Net</RootNamespace>
+    <AssemblyName>Klarna.Rest.Net</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common\ApiControllers.cs" />
+    <Compile Include="Common\Constants.cs" />
+    <Compile Include="Common\KlarnaEnvironment.cs" />
+    <Compile Include="Commuication\ApiException.cs" />
+    <Compile Include="Commuication\ApiUrlHelper.cs" />
+    <Compile Include="Commuication\BaseRestClient.cs" />
+    <Compile Include="Commuication\BaseStore.cs" />
+    <Compile Include="Commuication\Dto\ApiCredentials.cs" />
+    <Compile Include="Commuication\Dto\ApiSession.cs" />
+    <Compile Include="Commuication\Ref.cs" />
+    <Compile Include="Klarna.cs" />
+    <Compile Include="Model\AdditionalCheckbox.cs" />
+    <Compile Include="Model\AdditionalCheckboxV2.cs" />
+    <Compile Include="Model\Attachment.cs" />
+    <Compile Include="Model\CallbackAddressUpdateRequest.cs" />
+    <Compile Include="Model\CallbackAddressUpdateResponse.cs" />
+    <Compile Include="Model\CallbackCountryChangeRequest.cs" />
+    <Compile Include="Model\CallbackCountryChangeResponse.cs" />
+    <Compile Include="Model\CallbackOrderValidationRequest.cs" />
+    <Compile Include="Model\CallbackShippingOptionUpdateRequest.cs" />
+    <Compile Include="Model\CallbackShippingOptionUpdateResponse.cs" />
+    <Compile Include="Model\CheckoutAddressInfo.cs" />
+    <Compile Include="Model\CheckoutCustomer.cs" />
+    <Compile Include="Model\CheckoutMerchantUrls.cs" />
+    <Compile Include="Model\CheckoutOptions.cs" />
+    <Compile Include="Model\CheckoutOrder.cs" />
+    <Compile Include="Model\CustomerDirectDebitTokenDetails.cs" />
+    <Compile Include="Model\CustomerTokenAddressInfo.cs" />
+    <Compile Include="Model\CustomerTokenCardDetails.cs" />
+    <Compile Include="Model\CustomerTokenCreateOrderResponse.cs" />
+    <Compile Include="Model\CustomerTokenDetails.cs" />
+    <Compile Include="Model\CustomerTokenMerchantUrls.cs" />
+    <Compile Include="Model\CustomerTokenOrder.cs" />
+    <Compile Include="Model\CustomerTokenStatusUpdateRequest.cs" />
+    <Compile Include="Model\Dimensions.cs" />
+    <Compile Include="Model\Enum\CreditSessionStatus.cs" />
+    <Compile Include="Model\Enum\HostedPaymentPageDistributionMethod.cs" />
+    <Compile Include="Model\Enum\HostedPaymentPagePaymentMethodCategory.cs" />
+    <Compile Include="Model\Enum\HostedPaymentPagePurchaseType.cs" />
+    <Compile Include="Model\Enum\HostedPaymentPageStatus.cs" />
+    <Compile Include="Model\Enum\MerchantSettlementType.cs" />
+    <Compile Include="Model\Enum\OrderLineType.cs" />
+    <Compile Include="Model\Enum\OrderManagementFraudStatus.cs" />
+    <Compile Include="Model\Enum\OrderManagementInitialPaymentMethodType.cs" />
+    <Compile Include="Model\Enum\OrderManagementOrderStatus.cs" />
+    <Compile Include="Model\Enum\OrderManagementShippingMethod.cs" />
+    <Compile Include="Model\Enum\PaymentCustomerOrganizationEntityType.cs" />
+    <Compile Include="Model\Enum\PaymentOrderFraudStatus.cs" />
+    <Compile Include="Model\Enum\ShippingMethod.cs" />
+    <Compile Include="Model\Enum\TransactionType.cs" />
+    <Compile Include="Model\ErrorMessage.cs" />
+    <Compile Include="Model\ExpiresAt.cs" />
+    <Compile Include="Model\ExternalCheckout.cs" />
+    <Compile Include="Model\Gui.cs" />
+    <Compile Include="Model\HostedPaymentPageBackgroundImage.cs" />
+    <Compile Include="Model\HostedPaymentPageContactInformation.cs" />
+    <Compile Include="Model\HostedPaymentPageCreateSessionRequest.cs" />
+    <Compile Include="Model\HostedPaymentPageCreateSessionResponse.cs" />
+    <Compile Include="Model\HostedPaymentPageDistributeLink.cs" />
+    <Compile Include="Model\HostedPaymentPageMerchantUrls.cs" />
+    <Compile Include="Model\HostedPaymentPageOptions.cs" />
+    <Compile Include="Model\HostedPaymentPageSessionStatus.cs" />
+    <Compile Include="Model\MerchantRequested.cs" />
+    <Compile Include="Model\MerchantRequestedAdditionalCheckbox.cs" />
+    <Compile Include="Model\OrderLine.cs" />
+    <Compile Include="Model\OrderManagementAddressInfo.cs" />
+    <Compile Include="Model\OrderManagementAddShippingInfo.cs" />
+    <Compile Include="Model\OrderManagementCapture.cs" />
+    <Compile Include="Model\OrderManagementCreateCapture.cs" />
+    <Compile Include="Model\OrderManagementCustomer.cs" />
+    <Compile Include="Model\OrderManagementCustomerAddresses.cs" />
+    <Compile Include="Model\OrderManagementGetRefundResponse.cs" />
+    <Compile Include="Model\OrderManagementInitialPaymentMethod.cs" />
+    <Compile Include="Model\OrderManagementMerchantReferences.cs" />
+    <Compile Include="Model\OrderManagementOrder.cs" />
+    <Compile Include="Model\OrderManagementRefund.cs" />
+    <Compile Include="Model\OrderManagementSetNewOrderAmountAndLines.cs" />
+    <Compile Include="Model\OrderManagementShippingInfo.cs" />
+    <Compile Include="Model\Pagination.cs" />
+    <Compile Include="Model\PaymentAddressInfo.cs" />
+    <Compile Include="Model\PaymentCreditSession.cs" />
+    <Compile Include="Model\PaymentCreditSessionResponse.cs" />
+    <Compile Include="Model\PaymentCustomer.cs" />
+    <Compile Include="Model\PaymentGenerateConsumerTokenRequest.cs" />
+    <Compile Include="Model\PaymentGenerateConsumerTokenResponse.cs" />
+    <Compile Include="Model\PaymentMerchantUrls.cs" />
+    <Compile Include="Model\PaymentMethodCategory.cs" />
+    <Compile Include="Model\PaymentMethodCategoryAssetUrls.cs" />
+    <Compile Include="Model\PaymentOptions.cs" />
+    <Compile Include="Model\PaymentOrder.cs" />
+    <Compile Include="Model\PaymentOrderResponse.cs" />
+    <Compile Include="Model\PaymentProvider.cs" />
+    <Compile Include="Model\ProductIdentifiers.cs" />
+    <Compile Include="Model\SettlementsGetAllPayoutsResponse.cs" />
+    <Compile Include="Model\SettlementsGetTransactionsResponse.cs" />
+    <Compile Include="Model\SettlementsPayout.cs" />
+    <Compile Include="Model\SettlementsPayoutSummary.cs" />
+    <Compile Include="Model\SettlementsPayoutTotals.cs" />
+    <Compile Include="Model\ShippingAttributes.cs" />
+    <Compile Include="Model\ShippingOption.cs" />
+    <Compile Include="Model\Transaction.cs" />
+    <Compile Include="Model\VirtualCardCard.cs" />
+    <Compile Include="Model\VirtualCardCreateSettlementRequest.cs" />
+    <Compile Include="Model\VirtualCardSettlement.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Serialization\IJsonSerializer.cs" />
+    <Compile Include="Serialization\JsonSerializer.cs" />
+    <Compile Include="Store\CheckoutStore.cs" />
+    <Compile Include="Store\CustomerTokenStore.cs" />
+    <Compile Include="Store\HostedPaymentPageStore.cs" />
+    <Compile Include="Store\OrderManagementStore.cs" />
+    <Compile Include="Store\PaymentStore.cs" />
+    <Compile Include="Store\SettlementStore.cs" />
+    <Compile Include="Store\VirtualCardServiceStore.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
